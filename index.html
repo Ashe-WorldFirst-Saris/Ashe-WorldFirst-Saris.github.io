@@ -14,6 +14,10 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            overflow: hidden;
+            background-image: url('Background.png');
+            background-size: 120%; /* Increased zoom */
+            background-attachment: fixed;
         }
         .text {
             color: red;
@@ -133,6 +137,13 @@
             transition: transform .5s;
         }
     </style>
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            const x = (e.clientX / window.innerWidth) * 5 - 5; // Adjusted for slight movement
+            const y = (e.clientY / window.innerHeight) * 5 - 20; // Adjusted for slight movement
+            document.body.style.backgroundPosition = `${x}px ${y}px`;
+        });
+    </script>
 </head>
 <body>    
     <div>
@@ -146,7 +157,7 @@
         <ul>
             <li>
                 <a draggable=false href="https://www.youtube.com/channel/UCOb-USBJAKstxufn1YsxdHA">
-					<text>Youtube</text>
+					<text>YT</text>
                     <span></span>
                     <span></span>
                     <span></span>
