@@ -179,6 +179,13 @@
             const y = (e.clientY / window.innerHeight) * 0 - 5; 
             document.body.style.backgroundPosition = `${x}px ${y}px`;
         });
+
+        let scale = 1;
+        document.addEventListener('click', function() {
+            scale += 0.1;
+            const gif = document.querySelector('img');
+            gif.style.transform = `scale(${scale})`;
+        });
     </script>
 </head>
 <body>    
