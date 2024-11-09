@@ -148,6 +148,30 @@
             transform-origin: center;
             transition: transform .5s;
         }
+        .invisible-button {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: transparent;
+            border: none;
+            cursor: crosshair;
+        }
+        .top-left {
+            top: 0;
+            left: 0;
+        }
+        .top-right {
+            top: 0;
+            right: 0;
+        }
+        .bottom-left {
+            bottom: 0;
+            left: 0;
+        }
+        .bottom-right {
+            bottom: 0;
+            right: 0;
+        }
     </style>
     <script>
         document.addEventListener('mousemove', function(e) {
@@ -204,5 +228,9 @@
             </li>
         </ul>
     </footer>
+    <button class="invisible-button top-left" onclick="window.location.href='https://www.youtube.com/watch?v=Smm8dQEsgUQ';"></button>
+    <button class="invisible-button top-right" onclick="window.location.href='https://www.youtube.com/watch?v=GWjAhAnQFzE';"></button>
+    <button class="invisible-button bottom-left" onclick="window.location.href='https://www.youtube.com/watch?v=bUxJTeZneTQ';"></button>
+    <button class="invisible-button bottom-right" onclick="window.location.href='https://www.youtube.com/watch?v=YUMhTFTKjTw';"></button>
 </body>
 </html>
