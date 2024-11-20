@@ -150,11 +150,11 @@
         }
         .invisible-button {
             position: absolute;
-            width: 50px;
-            height: 50px;
+            width: 250px;
+            height: 250px;
             background: transparent;
             border: none;
-            cursor: crosshair;
+			cursor: crosshair;
         }
         .top-left {
             top: 0;
@@ -187,10 +187,20 @@
             gif.style.transform = `scale(${scale})`;
         });
     </script>
+	<script>
+      window.addEventListener("load", function () {
+        window.scrollTo(0, screen.height / 2);
+      });
+
+      function PanPakaPan() {
+        var audio = new Audio("PanPakaPan.mp3");
+        audio.play();
+      }
+    </script>
 </head>
-<body>    
+<body>  
     <div>
-        <p><img src="sandiego.gif" alt="sandiego" style="width:256px;height:256px;" draggable="false"></p>
+		<p><img src="sandiego.gif" alt="sandiego" style="width:256px;height:256px;" draggable="false"></p>
         <p><audio controls>
             <source src="Watashi Wa Numba Wan!.mp3" type="audio/mpeg">
         </audio></p>
@@ -236,8 +246,8 @@
         </ul>
     </footer>
     <button class="invisible-button top-left" onclick="window.location.href='https://www.youtube.com/watch?v=Smm8dQEsgUQ';"></button>
-    <button class="invisible-button top-right" onclick="window.location.href='https://www.youtube.com/watch?v=GWjAhAnQFzE';"></button>
+    <button class="invisible-button top-right" onclick="window.location.href='https://www.youtube.com/watch?v=YUMhTFTKjTw';"></button>
     <button class="invisible-button bottom-left" onclick="window.location.href='https://www.youtube.com/watch?v=KGNvimxJL_M';"></button>
-    <button class="invisible-button bottom-right" onclick="window.location.href='https://www.youtube.com/watch?v=YUMhTFTKjTw';"></button>
+    <button class="invisible-button bottom-right" onclick="PanPakaPan()"></button>
 </body>
 </html>
