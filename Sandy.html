@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VZ66L6ZZRR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VZ66L6ZZRR');
+</script>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico?">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watashi Wa Numba Wan!</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            background-image: url("images/background.png"); 
+            background-size: 120%;
+			background-size: cover;
+            background-attachment: fixed;
+			background-repeat: no-repeat;
+        }
+        .text {
+            color: red;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 36px;
+            position: absolute;
+            bottom: 50px;
+        }
+        ul {
+            color: black;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        li {
+            display: flex;
+        }
+        a {
+            position: relative;
+            display: block;
+            width: 100px;
+			font-family: 'Comic Sans MS', cursive, sans-serif;
+            height: 100px;
+            color: black;
+            line-height: 100px;
+            font-size: 24px;
+            text-align: center;
+            text-decoration: none;
+            color: #262626;
+            margin: 0 15px;
+        }
+        /* Hover effect */
+        a:nth-child(1):hover { color: #ff3f33 }
+        a:nth-child(2):hover { color: #33b8ff  }
+        a:nth-child(3):hover { color: #687fb5  }
+        a:nth-child(4):hover { color: #dc7633 }
+        span {
+            position: absolute;
+            transition: transform .5s;
+        }
+        span:nth-child(1),
+        span:nth-child(3) {
+            width: 100%;
+            height: 1px;
+            background: #262626;
+        }
+        span:nth-child(1) {
+            top: 0;
+            left: 0;
+            transform-origin: right;
+        }
+        a:hover span:nth-child(1) {
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .5s;
+        }
+        span:nth-child(3) {
+            bottom: 0;
+            left: 0;
+            transform-origin: left;
+            transition: transform .5s;
+        }
+        a:hover span:nth-child(3) {
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform .5s;
+        }
+        span:nth-child(2),
+        span:nth-child(4) {
+            width: 1px;
+            height: 100%;
+            background: #262626;
+        }
+        span:nth-child(2) {
+            top: 0;
+            left: 0;
+            transform: scaleY(0);
+            transform-origin: bottom;
+        }
+        a:hover span:nth-child(2) {
+            transform: scaleY(1);
+            transform-origin: top;
+            transition: transform .5s;
+        }
+        span:nth-child(4) {
+            top: 0;
+            right: 0;
+            transform: scaleY(0);
+            transform-origin: top;
+        }
+        a:hover span:nth-child(4) {
+            transform: scaleY(1);
+            transform-origin: bottom;
+            transition: transform .5s;
+        }
+        i {
+            transform-origin: center 150%;
+            transition: all .5s;
+        }
+        a:hover i {
+            transform: scale(1.05);
+        }
+        /* Click effect */
+        a:active i {
+            transform-origin: center 150%;
+            transform: scale(0);
+            opacity: 0;
+        }
+        a:active span:nth-child(1),
+        a:active span:nth-child(3) {
+            opacity: 0;
+            transition: opacity .5s;
+        }
+        a:active span:nth-child(2),
+        a:active span:nth-child(4) {
+            transform: scaleY(0);
+            transform-origin: center;
+            transition: transform .5s;
+        }
+        .invisible-button {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: transparent;
+            border: none;
+			cursor: crosshair;
+        }
+        .top-left {
+            top: 0;
+            left: 0;
+        }
+        .top-right {
+            top: 0;
+            right: 0;
+        }
+        .bottom-left {
+            bottom: 0;
+            left: 0;
+        }
+        .bottom-right {
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            const x = (e.clientX / window.innerWidth) * 5 - 5; 
+            const y = (e.clientY / window.innerHeight) * 0 - 5; 
+            document.body.style.backgroundPosition = `${x}px ${y}px`;
+        });
+
+        let scale = 1;
+        document.addEventListener('click', function() {
+            scale += 0.1;
+            const gif = document.querySelector('img');
+            gif.style.transform = `scale(${scale})`;
+        });
+    </script>
+	<script>
+      window.addEventListener("load", function () {
+        window.scrollTo(0, screen.height / 2);
+      });
+
+      function PanPakaPan() {
+        var audio = new Audio("PanPakaPan.mp3");
+        audio.play();
+      }
+    </script>
+</head>
+<body>  
+    <div>
+		<p><img src="sandiego.gif" alt="sandiego" style="width:256px;height:256px;" draggable="false"></p>
+        <p><audio controls>
+            <source src="Watashi Wa Numba Wan!.mp3" type="audio/mpeg">
+        </audio></p>
+    </div>
+    <button class="invisible-button top-left" onclick="window.location.href='https://www.youtube.com/watch?v=Smm8dQEsgUQ';"></button>
+    <button class="invisible-button top-right" onclick="window.location.href='https://www.youtube.com/watch?v=YUMhTFTKjTw';"></button>
+    <button class="invisible-button bottom-left" onclick="window.location.href='https://www.youtube.com/watch?v=KGNvimxJL_M';"></button>
+    <button class="invisible-button bottom-right" onclick="PanPakaPan()"></button>
+</body>
+</html>
