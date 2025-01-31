@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">    
-    <title>What?? Touhou?? -</title>
+    <title>What?? Touhou?? </title>
     <style type="text/css" id="operaUserStyle"></style>
 	
     <style type="text/css">
         body {
             text-align: center;
-            user-select: none; /* Prevent text selection */
         }
         .text-shadow {
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -24,9 +23,20 @@
             cursor: pointer;
             color: #f44336;
         }
+			#koishi {
+            position: fixed;
+            bottom: 00px;
+            right: 00px;
+            cursor: pointer;
+        }
     </style>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico?">
     <audio id="audio" src="./cc/A dream more scarlet than red.mp3" preload="auto"></audio>
+	    <script>
+        function hideImage() {
+            document.getElementById('koishi').style.display = 'none';
+        }
+    </script>
 </head>
 <body background="./cc/mariparu.gif" bgcolor="#000000" text="#f44336" link="#f44336" alink="#f44336" vlink="#efbb38">
     <font size="5" face="Yu Gothic">
@@ -35,30 +45,37 @@
         </a>
         <center>
             <font size="7" color="#f44336" face="Yu Gothic" class="text-shadow"><b>Abandon all hope, ye who enter here..</b></font><br>
+			<img src="./cc/reimu.gif" alt="reimu" />
         </center>
     </font>
     <button class="play-button" onclick="document.getElementById('audio').play();">🎵</button>
+	<img id="koishi" src="./cc/koishi.png" onclick="hideImage();" />
 </body>
-<font size="7"><b>
+<font size="7" face="" ><b>
 
 		<hr></li><li><a href="https://www16.big.or.jp/~zun/">東方Projectは好きですか？</a>  <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 		 
 
-		<hr></li><li><a href="https://gensokyoradio.net/playing/">music すべての音楽が好きだ。</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		<hr></li><li><a href="https://gensokyoradio.net/playing/">Music すべての音楽が好きだ。</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
 
 		<hr></li><li><a href="https://www.pixiv.net/en/tags/東方/artworks">Artworksアートワークも気に入っている。</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 		
 		<hr></li><li><a href="https://fumo.website">FumoFumo</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
-
+		
+		<hr></li><li><a> Play Touhou. ぜひプレーしてほしい。</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		
 		<hr></li><li><a href="https://www.youtube.com/watch?v=VInpkQz5Z90">Gameplay ゲームは楽しい。</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
 
 		<hr></li><li><a href="https://www.youtube.com/watch?v=w3YmmdgcHb8">PC-98</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
 
-		<hr></li><li><a> Play Touhou. ぜひプレーしてほしい。</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
-
+		
+		<center>
+        <img src="./cc/PC98.png" alt="PC98" />
+		</center>
+		
 		<hr></li><li><a href="https://moriyashrine.org/files/file/273-touhou-1-highly-responsive-to-prayers/">1 東方靈異伝 ~ Highly Responsive to Prayers 1997</a>  <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
 
@@ -73,6 +90,9 @@
 
 
 		<hr></li><li><a href="">第1世代ウィンドウズ（TH6～TH9.5）</a>  <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		<center>
+        <img src="./cc/Th06titlescreen.jpg" alt="TH06" />
+		</center>
 
 		<hr></li><li><a href="https://moriyashrine.org/files/file/13-touhou-6-koumakyou-the-embodiment-of-scarlet-devil/">6 東方紅魔郷　～ the Embodiment of Scarlet Devil 2002</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
@@ -91,6 +111,10 @@
 		<hr></li><li><a href="https://moriyashrine.org/files/file/22-touhou-95-bunkachou-shoot-the-bullet/">9.5 東方文花帖　～ Shoot the Bullet 2005</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
 		<hr></li><li><a href="">第2世代ウィンドウズ（TH10～TH13.5）</a>  <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		<center>
+        <img src="./cc/th10.jpg" alt="TH10" />
+		</center>
+		
 
 		<hr></li><li><a href="https://moriyashrine.org/files/file/23-touhou-10-fuujinroku-mountain-of-faith/">10 東方風神録　～ Mountain of Faith 2007</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
@@ -113,6 +137,9 @@
 		<hr></li><li><a href="https://moriyashrine.org/files/file/54-touhou-135-shinkirou-hopeless-masquerade/">13.5 東方心綺楼～ Hopeless Masquerade 2013</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
 		<hr></li><li><a href="">第3世代ウィンドウズ（TH14～TH19）</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		<center>
+        <img src="./cc/th14.jpg" alt="TH14" />
+		</center>
 
 		<hr></li><li><a href="https://moriyashrine.org/files/file/55-touhou-14-kishinjou-double-dealing-character/">14 東方輝針城　～ Double Dealing Character 2013</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
@@ -148,13 +175,14 @@
 
 		<hr></li><li><a href="">--------------------FANWORK GAMES--------------------</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
-
-
-		 <hr></li><li><a href="https://moriyashrine.org/files/file/879-touhou-luna-nights/">Touhou Luna Nights</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
-
-
-		 
+		<center>
+        <img src="./cc/26.png" alt="Rhythmn Carnival" />
+		</center>
+		
 		<hr></li><li><a href="https://moriyashrine.org/files/file/484-touhou-rhythm-carnival-scarlet/">東方リズムカーニバル！紅 Touhou Rhythm Carnival! Kurenai</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+
+		<hr></li><li><a href="https://moriyashrine.org/files/file/879-touhou-luna-nights/">Touhou Luna Nights</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+
 
 			  
 		<hr></li><li><a href="https://moriyashrine.org/files/file/270-labyrinth-of-touhou-gensoukyo-and-the-heaven-piercing-tree/">LABYRINTH OF TOUHOU</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
@@ -182,9 +210,26 @@
 
 		<hr></li><li><a href="https://moriyashrine.org/files/file/180-gensou-shoujo-taisen-kou-fantasy-maiden-wars-scarlet/">Gensou Shoujo Taisen Kou - Fantasy Maiden Wars Scarlet </a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">  
 
-		<hr></li><li><a href="">--------------------MUSIC FANWORKS--------------------</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		<hr></li><li><a href="">--------------------OVA--------------------</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		
+		<center>
+        <img src="./cc/phantasm.png" alt="Memories of Phantasm" />
+		</center>
 
-		<hr></li><li><a href="https://www.youtube.com/watch?v=RMb6zjgp2ws">【東方アレンジ】PARLOR TRICK</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> 
+		<hr></li><li><a href="https://archive.org/details/mop-e1-remastered">Gensou Mangekyou: The Memories of Phantasm</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		
+		<hr></li><li><a href="https://archive.org/details/seh-e1-remastered">Hifuu Club Activity Record ~The Sealed Esoteric History~</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		
+		<hr></li><li><a href="https://archive.org/details/touhou-niji-sousaku-doujin-anime-musou-kakyou">Touhou Niji Sousaku: Musou Kakyou</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+
+		<hr></li><li><a href="">--------------------MUSIC FANWORKS--------------------</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		<center>
+        <img src="./cc/cover.jpg" alt="Unionest.NET" />
+		</center>
+
+		<hr></li><li><a href="https://www.youtube.com/watch?v=AUzR-bGOEW0">ONtology</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		
+		<hr></li><li><a href="https://www.youtube.com/watch?v=RMb6zjgp2ws">PARLOR TRICK</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> 
 
 
 		<hr></li><li><a href="https://www.youtube.com/watch?v=fYn_TU9rb0A">幸郷の記憶 「全ピ連」</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
@@ -194,62 +239,62 @@
 		<hr></li><li><a href="https://www.youtube.com/watch?v=VHj57PgDMjw">Okuu & Orin Dekkaiwa</a>  <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 		 
 
-		<hr></li><li><a href="https://www.youtube.com/watch?v=bUxJTeZneTQ">【音降る神霊廟】神霊廟秋祭りっ！【大神神話伝】《針の音楽 公式》</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> 
+		<hr></li><li><a href="https://www.youtube.com/watch?v=bUxJTeZneTQ">【音降る神霊廟】神霊廟秋祭りっ！</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> 
 
-		<hr></li><li><a href="https://www.youtube.com/watch?v=0cJjSM2Y2gk">永遠の三日天下/弾幕アマノジャク ～ Impossible Spell Card.【オルゴール】</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		<hr></li><li><a href="https://www.youtube.com/watch?v=0cJjSM2Y2gk">永遠の三日天下/弾幕アマノジャク</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
 		 
 
 		<hr></li><li><a href="https://www.youtube.com/watch?v=r3j1IhPRFs0">東方ヴォーカルPV】HANIPAGANDA【暁Records公式】</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
-		<hr></li><li><a href="https://www.youtube.com/watch?v=jLEB_o1Ca-s">【東方 PC-98 Arrange】 緑眼のジェラシー (Green-Eyed Jealousy)</a>  <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">   
+		<hr></li><li><a href="https://www.youtube.com/watch?v=jLEB_o1Ca-s">緑眼のジェラシー (Green-Eyed Jealousy)</a>  <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">   
 
 
-		<hr></li><li><a href="https://www.youtube.com/watch?v=Gz5JLASR0Bs">(PC-98 Remix) Hartmann's Youkai Girl - Touhou 11: SA</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">  <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> 
+		<hr></li><li><a href="https://www.youtube.com/watch?v=Gz5JLASR0Bs"> Hartmann's Youkai Girl - Touhou 11: SA</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">  <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> 
 
 		<hr></li><li><a href="https://www.youtube.com/watch?v=Gz5JLASR0Bs">Touhou - Nights Of Nights [PC-98 Cover]</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
 
-		<hr></li><li><a href="https://www.youtube.com/watch?v=wgk8wtYNywE">【乱乱流】お空のニュークリアフュージョン道場踊ってみた【山形】</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		<hr></li><li><a href="https://www.youtube.com/watch?v=wgk8wtYNywE">お空のニュークリアフュージョン道場踊ってみた</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
-		<hr></li><li><a href="https://www.youtube.com/watch?v=2WZ6zm47swE">Fantastic Danmaku Festival The glamorous waltz ~ The little devil dance</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		<hr></li><li><a href="https://www.youtube.com/watch?v=2WZ6zm47swE">The glamorous waltz ~ The little devil dance</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
 
 
 		<hr></li><li><a href="https://www.youtube.com/watch?v=GWjAhAnQFzE">こうまかん☆ぷぺぽープレビュー版</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
 
-		<hr></li><li><a href="https://www.youtube.com/watch?v=YsapA1gzLoE">ZTS (Disaster) 東方萃夢想 ～Phantasmagoria～ [東方萃夢想 ]</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"><img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		<hr></li><li><a href="https://www.youtube.com/watch?v=YsapA1gzLoE">東方萃夢想 ～Phantasmagoria～</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"><img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
-		<hr></li><li><a href="https://www.youtube.com/watch?v=7UuSSdmJDtw">【東方アレンジ】 おぜうとぷぺぽー 【Sing, R. Sing!】</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		<hr></li><li><a href="https://www.youtube.com/watch?v=7UuSSdmJDtw"> おぜうとぷぺぽー 【Sing, R. Sing!】</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
 
 
-		<hr></li><li><a href="https://www.youtube.com/watch?v=q8-o6DEb4EQ">【東方Instrumental】狂言「九十九星降」 凋叶棕</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		<hr></li><li><a href="https://www.youtube.com/watch?v=q8-o6DEb4EQ">狂言「九十九星降」 凋叶棕</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
-		<hr></li><li><a href="https://www.youtube.com/watch?v=Vne8y9Ne4ko">【東方ボーカルアレンジ】LUCKY CAT【ちょこふぁん】</a>  <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">  <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		<hr></li><li><a href="https://www.youtube.com/watch?v=Vne8y9Ne4ko">LUCKY CAT</a>  <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">  <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
-		<hr></li><li><a href="https://www.youtube.com/watch?v=FC0xOk_Ktw4">【東方】The moon which was swallowed to a wolf 「C-CLAYS」</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		<hr></li><li><a href="https://www.youtube.com/watch?v=FC0xOk_Ktw4">The moon which was swallowed to a wolf </a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
 
 
 		<hr></li><li><a href="https://www.youtube.com/watch?v=6EUYBWhVkKg">エンドレス・てゐマパーク</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
-		<hr></li><li><a href="https://www.youtube.com/watch?v=pV53pVfzCig">東方 [Piano] Lunar Clock ~ Luna Dial 『4』</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		<hr></li><li><a href="https://www.youtube.com/watch?v=pV53pVfzCig">Lunar Clock ~ Luna Dial 『4』</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
 		<hr></li><li><a href="https://www.youtube.com/watch?v=Tc8iu0XFUQc">WE ARE JAPANESE GOBLIN ! ! ! !</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
 
 
-		<hr></li><li><a href="https://www.youtube.com/watch?v=6RgqHwkGL8A">東方MV】きゅうりバーにダイブ【IOSYS】</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		<hr></li><li><a href="https://www.youtube.com/watch?v=6RgqHwkGL8A">きゅうりバーにダイブ</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
 
-		<hr></li><li><a href="https://www.youtube.com/watch?v=uJMAxY3OJy4">Touhou MV】Absolutely-Will-Kill-Chang'e Man【IOSYS】</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"><img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		<hr></li><li><a href="https://www.youtube.com/watch?v=uJMAxY3OJy4">Absolutely-Will-Kill-Chang'e Man</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"><img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
-		<hr></li><li><a href="https://www.youtube.com/watch?v=RVc7PSpyamk">ALiCE'S EMOTiON - Mizuhashi Jealoussic Park</a>  <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		<hr></li><li><a href="https://www.youtube.com/watch?v=RVc7PSpyamk">Mizuhashi Jealoussic Park</a>  <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
 
-		<hr></li><li><a href="https://www.youtube.com/watch?v=_lDM0G7UeJU">ぱるぱるぱｒ・・・みんなーしねばいーのにー☆歌ってみぱるぱる</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		<hr></li><li><a href="https://www.youtube.com/watch?v=_lDM0G7UeJU">みんなーしねばいーのにー☆歌ってみぱるぱる</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
 
 		<hr></li><li><a href="https://www.youtube.com/watch?v=xcGd_NZaZKw">イタ電はやめて！ ぼくらのスカーレット・コール</a><img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
@@ -270,8 +315,6 @@
 
 		 <hr></li><li><a href="https://www.youtube.com/watch?v=fbJiRfIp_cU">TouhouMAD - Touhou & Nitori Get Down!</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
-		<hr></li><li><a href="https://www.youtube.com/watch?v=AUzR-bGOEW0">東方】ONtology【レトロスペクティブ京都】</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
-
 		<hr></li><li><a href="https://www.youtube.com/watch?v=8iF2WBqKuQs">Club Ibuki in Break All PUNK ver.</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
 		<hr></li><li><a href="https://www.youtube.com/watch?v=eGslweDOihs">Telephone Awoo</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
@@ -279,24 +322,27 @@
 		<hr></li><li><a href="https://www.youtube.com/watch?v=7h7bnYA1LXE">スカーレット警察のゲットーパトロール24時</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
 
-		<hr></li><li><a href="https://www.youtube.com/watch?v=vS_a8Edde8k">Night of Nights (Flowering nights remix) By COOL&CREATE/beatMARIO</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		<hr></li><li><a href="https://www.youtube.com/watch?v=vS_a8Edde8k">Night of Nights By COOL&CREATE/beatMARIO</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
 
 
-		<hr></li><li><a href="https://www.youtube.com/watch?v=arP18TqPZnc">Convictor Yamaxanadu!」</a>  <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		<hr></li><li><a href="https://www.youtube.com/watch?v=arP18TqPZnc">Convictor Yamaxanadu!</a>  <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
-		 <hr></li><li><a href="https://www.youtube.com/watch?v=0aW62jeSvu8">Cirno's Perfect Math Class: The ⑨ Anniversary Edition</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		 <hr></li><li><a href="https://www.youtube.com/watch?v=0aW62jeSvu8">Cirno's Perfect Math Class</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
 
 		<hr></li><li><a href="https://www.youtube.com/watch?v=4spg9HGDVV4">ナルキッソスにさよなら</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
 
-		<hr></li><li><a href="https://www.youtube.com/watch?v=RhV2X7WQMPA">The Midnight Moon Hidden Behind The Clouds 〜 Fall in the Dark</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		<hr></li><li><a href="https://www.youtube.com/watch?v=RhV2X7WQMPA">Fall in the Dark</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
 
-		<hr></li><li><a href="https://www.youtube.com/watch?v=uuPaercioaE">[東方Project] ソラをとびこえて / 鳩春</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		<hr></li><li><a href="https://www.youtube.com/watch?v=uuPaercioaE">ソラをとびこえて / 鳩春</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
 
 		<hr></li><li><a href="https://ashe.moe">Play Touhou.</a> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0"> <img align="absmiddle" src="./cc/hakkero.gif" vspace="0" hspace="0" border="0">
+		<center>
+        <img src="./cc/easymode.png" alt="Easy Mode" />
+		</center>
 
 	<hr>
 </body>
