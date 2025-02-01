@@ -1,4 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-gensokyoradio.net	TRUE	/	FALSE	1999999999	PHPSESSID	c90fe7b17784dfb412274dec02ca452d
-
