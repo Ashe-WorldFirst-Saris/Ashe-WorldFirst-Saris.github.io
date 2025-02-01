@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">    
+    <title>Chat??</title>
+    <style type="text/css" id="operaUserStyle"></style>
+	
+    <style type="text/css">
+        body {
+            text-align: center;
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .play-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50px;
+            height: 50px;
+            font-size: 40px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            color: #f44336;
+        }
+			#koishi {
+            position: fixed;
+            bottom: 00px;
+            right: 00px;
+            cursor: pointer;
+        }
+    </style>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico?">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <audio id="audio" src="./cc/A dream more scarlet than red.mp3" preload="auto"></audio>
+	    <script>
+        function hideImage() {
+            document.getElementById('koishi').style.display = 'none';
+        }
+    </script>
+</head>
+<body background="./cc/mariparu.gif" bgcolor="#000000" text="#f44336" link="#f44336" alink="#f44336" vlink="#efbb38">
+    <font size="5" face="Yu Gothic">
+        <a href="https://ashe.moe">
+			<blink><b><<< えっ、もう帰りたいの？</b></blink>
+        </a>
+        <center>
+			<img src="./cc/reimu.gif" alt="reimu" />
+        </center>
+    </font>
+    <button class="play-button" onclick="document.getElementById('audio').play();">🎵</button>
+	<img id="koishi" src="./cc/koishi.png" onclick="hideImage();" />
+</body>
+<iframe src="https://www3.cbox.ws/box/?boxid=3543990&boxtag=oERzm4" width="50%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>	
+</body>
+</html>
