@@ -65,93 +65,9 @@
             color: white;
             margin: 0 15px;
         }
-        /* Hover effect */
-        a:nth-child(1):hover { color: #ff3f33 }
-        a:nth-child(2):hover { color: #33b8ff  }
-        a:nth-child(3):hover { color: #687fb5  }
-        a:nth-child(4):hover { color: #dc7633 }
-        span {
-            position: absolute;
-            transition: transform .5s;
-        }
-        span:nth-child(1),
-        span:nth-child(3) {
-            width: 100%;
-            height: 1px;
-            background: #262626;
-        }
-        span:nth-child(1) {
-            top: 0;
-            left: 0;
-            transform-origin: right;
-        }
-        a:hover span:nth-child(1) {
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform .5s;
-        }
-        span:nth-child(3) {
-            bottom: 0;
-            left: 0;
-            transform-origin: left;
-            transition: transform .5s;
-        }
-        a:hover span:nth-child(3) {
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform .5s;
-        }
-        span:nth-child(2),
-        span:nth-child(4) {
-            width: 1px;
-            height: 100%;
-            background: #262626;
-        }
-        span:nth-child(2) {
-            top: 0;
-            left: 0;
-            transform: scaleY(0);
-            transform-origin: bottom;
-        }
-        a:hover span:nth-child(2) {
-            transform: scaleY(1);
-            transform-origin: top;
-            transition: transform .5s;
-        }
-        span:nth-child(4) {
-            top: 0;
-            right: 0;
-            transform: scaleY(0);
-            transform-origin: top;
-        }
-        a:hover span:nth-child(4) {
-            transform: scaleY(1);
-            transform-origin: bottom;
-            transition: transform .5s;
-        }
-        i {
-            transform-origin: center 150%;
-            transition: all .5s;
-        }
         a:hover i {
             transform: scale(1.05);
-        }
-        /* Click effect */
-        a:active i {
-            transform-origin: center 110%;
-            transform: scale(0);
-            opacity: 0;
-        }
-        a:active span:nth-child(1),
-        a:active span:nth-child(3) {
-            opacity: 0;
-            transition: opacity .5s;
-        }
-        a:active span:nth-child(2),
-        a:active span:nth-child(4) {
-            transform: scaleY(0);
-            transform-origin: center;
-            transition: transform .5s;
+        
         }
         .invisible-button {
             position: absolute;
@@ -212,16 +128,15 @@
         <ul>
             <li>
                 <a draggable=false href="https://www.youtube.com/channel/UCOb-USBJAKstxufn1YsxdHA">
-					<text>YT</text>
+					<text>yt</text>
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
                     <i class="icon youtube"></i>
-					
                 </a>
                 <a draggable=false href="https://x.com/NesiVr">
-					<text>X</text>
+					<text>x</text>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -229,7 +144,7 @@
                     <i class="icon twitter"></i>
                 </a>
                 <a draggable=false href="https://steamcommunity.com/id/ashedayo/">
-					<text>Steam</text>
+					<text>steam</text>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -237,7 +152,7 @@
                     <i class="icon steam"></i>
                 </a>
                 <a draggable=false href="https://inara.cz/elite/cmdr/401756/">
-					<text>Inara</text>
+					<text>inara</text>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -253,12 +168,13 @@
 	<button class="invisible-button bottom-right" onclick="window.location.href='https://ashe.moe/sandy';"></button>
     <button class="invisible-button center" onclick="PanPakaPan()"></button>
     <div style="text-align: bottom;">
-        <a href="https://ashe.moe/touhou" style="color: white; text-decoration: underline dotted;">touhou?</a>
-    </div>
-	<div>	
-		<button style="background: transparent; border: none; cursor: pointer;" onclick="window.location.href='https://ashe.moe/badapple';">
-				<img src="apple.png" alt="Apple" style="top-right; width: 50px; height: 50px;">
-			</button>
+	<li>
+        <a href="https://ashe.moe/touhou" style="color: white;">touhou</a>	
+	 <button style="background: transparent; border: none; cursor: pointer;" onclick="window.location.href='https://ashe.moe/badapple';">
+		<img src="apple.png" alt="Apple" style="top-right; width: 50px; height: 50px;">
+		</button>
+		<a href="https://ashe.moe/chat" style="color: white;">hatemail</a>	
+	</li>
 	</div>
 </body>
 </html>
