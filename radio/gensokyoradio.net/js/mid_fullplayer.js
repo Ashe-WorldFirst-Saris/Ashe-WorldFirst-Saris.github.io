@@ -47,11 +47,11 @@ function playerContextSet() {
 		analyser.connect(javascriptNode);
 
 		var gradient = ctx.createLinearGradient(0,0,0,1080);
-		gradient.addColorStop(0,'#00ffee');
-		gradient.addColorStop(0.25,'#aa00ff');
-		gradient.addColorStop(0.5,'#ff00dd');
-		gradient.addColorStop(0.75, '#aa00ff');
-		gradient.addColorStop(1,'#00ffee');
+		gradient.addColorStop(0,'#ab032a');
+		gradient.addColorStop(0.25,'#960023');
+		gradient.addColorStop(0.5,'#75001b');
+		gradient.addColorStop(0.75, '#5c0217');
+		gradient.addColorStop(1,'#450111');
 
 		javascriptNode.onaudioprocess = function() {
 			

@@ -12,17 +12,6 @@
         <link rel="stylesheet" href="../css/switch.css">
         <link rel="stylesheet" href="https://www.jsdelivr.com/package/npm/@creativebulma/bulma-divider">
         <!--<link rel="stylesheet" href="/css/bulma-calendar.min.css">-->
-
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-4885042-5"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-4885042-5');
-        </script>
-
         <script src="../../ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="../js/jquery-color.js"></script>
         <!--<script src="/js/bulma-calendar.min.js"></script>-->
@@ -37,8 +26,6 @@
 
     <body>
         <div id="bg1" style="position:absolute; top:0; left:0; width:100%; height:100%; background: fixed no-repeat; background-size: cover; filter: blur(16px) brightness(0.5) grayscale(1);"></div>
-        <div style="position:absolute; top:0; left:0; width:100%; height:100%; background-color: #2058;"></div>
-        <section id="heroMain" class="hero is-primary is-fullheight video">
 
             <div class="hero-video is-transparent">
                 <canvas id="eq_canvas" width="1920" height="1080" style="width:100%; height:100%;">
@@ -56,46 +43,6 @@
     <div class="navbar-end">
     </div>
 </div>
-
-<!-- Login modal -->
-<div id="modalLoginContainer" class="modal">
-    <div class="modal-background" onclick="modalToggleLogin()"></div>
-    <div class="modal-card has-text-white">
-        <header class="modal-card-head">
-            <p class="modal-card-title">Login</p>
-        </header>
-        <section class="modal-card-body">
-                <form>
-                    <div class="section">
-                        <div class="field">
-                            <div class="control">
-                                <input class="input is-light has-text-white" type="text" name="username" id="user" placeholder="User" />
-                            </div>
-                            <div id="userError" class="has-text-danger"></div>
-                        </div>
-                        <div class="field">
-                            <div class="control">
-                                <input class="input is-light has-text-white" type="password" name="password" id="pass" placeholder="Pass" />
-                            </div>
-                            <div id="passError" class="has-text-danger"></div>
-                        </div>
-                        <span><a href="https://gensokyoradio.net/account/recover">I don't remember my password</a></span>
-                    </div>
-                </form>
-        </section>
-        <footer class="modal-card-foot">
-            <div class="columns is-gapless" style="width:100%">
-                <div class="column">
-                    <button id="modalLogin" class="button is-gr-violet" onclick="login()">LOGIN</button>
-                    <button id="modalCancel" class="button has-text-white" onclick="modalToggleLogin()">Cancel</button>
-                </div>
-                <div class="column has-text-right">
-                    <a href="https://gensokyoradio.net/register"><button id="modalRegister" class="button has-text-white">Register a new account</button></a>
-                </div>
-            </div>
-        </footer>
-    </div>
-</div>    </nav>
 </header>
 
 <!-- Bottom song info bar -->
