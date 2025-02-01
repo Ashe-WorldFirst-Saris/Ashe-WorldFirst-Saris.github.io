@@ -1,0 +1,230 @@
+.switch {
+  position: relative;
+  margin-bottom: 1rem;
+  outline: 0;
+  user-select: none;
+  font-size: 1rem;
+  min-height: 2rem;
+  height: 2rem;
+}
+.switch input {
+  position: absolute;
+  margin-bottom: 0;
+  opacity: 0;
+}
+.switch input:checked ~ label {
+  background: #b162e8;
+}
+.switch input:checked ~ label::before {
+  left: 2.25rem;
+}
+.switch label {
+  position: relative;
+  display: block;
+  width: 4rem;
+  height: 2rem;
+  border-radius: 3px;
+  background: #b5b5b5;
+  transition: all 0.25s ease-out;
+  line-height: 2rem;
+  cursor: pointer;
+}
+input + .switch label {
+  margin: 0;
+}
+.switch label::after {
+  position: absolute;
+  content: attr(data-label);
+  left: 4.5rem;
+  width: 100%;
+}
+.switch label::before {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  transform: translate3d(0, 0, 0);
+  border-radius: 3px;
+  background: white;
+  transition: all 0.25s ease-out;
+  content: "";
+}
+.switch input:checked ~ label::before {
+  left: 2.25rem;
+}
+.switch.is-small {
+  font-size: 0.75rem;
+  min-height: 1.5rem;
+  height: 1.5rem;
+}
+.switch.is-small input:checked ~ label {
+  background: #b162e8;
+}
+.switch.is-small input:checked ~ label::before {
+  left: 1.75rem;
+}
+.switch.is-small label {
+  position: relative;
+  display: block;
+  width: 3rem;
+  height: 1.5rem;
+  border-radius: 3px;
+  background: #b5b5b5;
+  transition: all 0.25s ease-out;
+  line-height: 1.5rem;
+  cursor: pointer;
+}
+input + .switch.is-small label {
+  margin: 0;
+}
+.switch.is-small label::after {
+  position: absolute;
+  content: attr(data-label);
+  left: 3.375rem;
+  width: 100%;
+}
+.switch.is-small label::before {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  transform: translate3d(0, 0, 0);
+  border-radius: 3px;
+  background: white;
+  transition: all 0.25s ease-out;
+  content: "";
+}
+.switch.is-small input:checked ~ label::before {
+  left: 1.75rem;
+}
+.switch.is-medium {
+  font-size: 1.25rem;
+  min-height: 2.5rem;
+  height: 2.5rem;
+}
+.switch.is-medium input:checked ~ label {
+  background: #b162e8;
+}
+.switch.is-medium input:checked ~ label::before {
+  left: 2.75rem;
+}
+.switch.is-medium label {
+  position: relative;
+  display: block;
+  width: 5rem;
+  height: 2.5rem;
+  border-radius: 3px;
+  background: #b5b5b5;
+  transition: all 0.25s ease-out;
+  line-height: 2.5rem;
+  cursor: pointer;
+}
+input + .switch.is-medium label {
+  margin: 0;
+}
+.switch.is-medium label::after {
+  position: absolute;
+  content: attr(data-label);
+  left: 5.625rem;
+  width: 100%;
+}
+.switch.is-medium label::before {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  transform: translate3d(0, 0, 0);
+  border-radius: 3px;
+  background: white;
+  transition: all 0.25s ease-out;
+  content: "";
+}
+.switch.is-medium input:checked ~ label::before {
+  left: 2.75rem;
+}
+.switch.is-large {
+  font-size: 1.5rem;
+  min-height: 3rem;
+  height: 3rem;
+}
+.switch.is-large input:checked ~ label {
+  background: #b162e8;
+}
+.switch.is-large input:checked ~ label::before {
+  left: 3.25rem;
+}
+.switch.is-large label {
+  position: relative;
+  display: block;
+  width: 6rem;
+  height: 3rem;
+  border-radius: 3px;
+  background: #b5b5b5;
+  transition: all 0.25s ease-out;
+  line-height: 3rem;
+  cursor: pointer;
+}
+input + .switch.is-large label {
+  margin: 0;
+}
+.switch.is-large label::after {
+  position: absolute;
+  content: attr(data-label);
+  left: 6.75rem;
+  width: 100%;
+}
+.switch.is-large label::before {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  transform: translate3d(0, 0, 0);
+  border-radius: 3px;
+  background: white;
+  transition: all 0.25s ease-out;
+  content: "";
+}
+.switch.is-large input:checked ~ label::before {
+  left: 3.25rem;
+}
+
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  width: 170px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -85px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  padding: 5px;
+}

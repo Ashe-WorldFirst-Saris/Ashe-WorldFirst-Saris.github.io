@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+        Now Playing | Gensokyo Radio        </title>
+        <link rel="stylesheet" href="../css/style-gr8.css">
+        <link rel="stylesheet" href="../css/style-gr8-extras.css">
+		<link href="../fa/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/volSlider.css">
+        <link rel="stylesheet" href="../css/switch.css">
+        <link rel="stylesheet" href="https://www.jsdelivr.com/package/npm/@creativebulma/bulma-divider">
+        <!--<link rel="stylesheet" href="/css/bulma-calendar.min.css">-->
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-4885042-5"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-4885042-5');
+        </script>
+
+        <script src="../../ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="../js/jquery-color.js"></script>
+        <!--<script src="/js/bulma-calendar.min.js"></script>-->
+        <script src="../js/gr8ws.js"></script>
+        <script src="../js/mid_fullplayer.js"></script>
+		<script defer src="../fa/js/all.js"></script>
+            </head>    <style>
+        html, body {
+            overflow:hidden;
+        }
+    </style>
+
+    <body>
+        <div id="bg1" style="position:absolute; top:0; left:0; width:100%; height:100%; background: fixed no-repeat; background-size: cover; filter: blur(16px) brightness(0.5) grayscale(1);"></div>
+        <div style="position:absolute; top:0; left:0; width:100%; height:100%; background-color: #2058;"></div>
+        <section id="heroMain" class="hero is-primary is-fullheight video">
+
+            <div class="hero-video is-transparent">
+                <canvas id="eq_canvas" width="1920" height="1080" style="width:100%; height:100%;">
+                </canvas>
+            </div>
+
+            <header>
+    <!-- Top navigation bar -->
+    <nav id="navTop" class="navbar is-fixed-top is-transparent is-spaced" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand is-dark">
+    </a>
+</div>
+
+<div class="navbar-menu">
+    <div class="navbar-end">
+    </div>
+</div>
+
+<!-- Login modal -->
+<div id="modalLoginContainer" class="modal">
+    <div class="modal-background" onclick="modalToggleLogin()"></div>
+    <div class="modal-card has-text-white">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Login</p>
+        </header>
+        <section class="modal-card-body">
+                <form>
+                    <div class="section">
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-light has-text-white" type="text" name="username" id="user" placeholder="User" />
+                            </div>
+                            <div id="userError" class="has-text-danger"></div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-light has-text-white" type="password" name="password" id="pass" placeholder="Pass" />
+                            </div>
+                            <div id="passError" class="has-text-danger"></div>
+                        </div>
+                        <span><a href="https://gensokyoradio.net/account/recover">I don't remember my password</a></span>
+                    </div>
+                </form>
+        </section>
+        <footer class="modal-card-foot">
+            <div class="columns is-gapless" style="width:100%">
+                <div class="column">
+                    <button id="modalLogin" class="button is-gr-violet" onclick="login()">LOGIN</button>
+                    <button id="modalCancel" class="button has-text-white" onclick="modalToggleLogin()">Cancel</button>
+                </div>
+                <div class="column has-text-right">
+                    <a href="https://gensokyoradio.net/register"><button id="modalRegister" class="button has-text-white">Register a new account</button></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>    </nav>
+</header>
+
+<!-- Bottom song info bar -->
+<div id="navBot" class="navbar is-fixed-bottom is-black is-spaced is-hidden-mobile">
+    <div class="navbar-brand is-dark is-hidden-touch">
+    <span class="navbar-item" style="margin-left:10px;">
+        <svg id="playStopBtn" viewbox="0 0 140 140">
+            <circle cx="70" cy="70" r="65" style="fill:#632279; stroke:transparent"/>
+            <polygon id="shape" points="50,40 100,70 100,70 50,100, 50,40" style="fill:#fff;">
+                <animate 
+                    id="animate_to_stop" 
+                    begin="indefinite" 
+                    fill="freeze" 
+                    attributeName="points" 
+                    dur="500ms" 
+                    to="45,45 95,45 95,95, 45,95 45,45"
+                    keySplines="
+                    0.1 0.8 0.2 1; 
+                    0.1 0.8 0.2 1; 
+                    0.1 0.8 0.2 1; 
+                    0.1 0.8 0.2 1; 
+                    0.1 0.8 0.2 1; 
+                    0.1 0.8 0.2 1"
+                    keyTimes="0;0.22;0.33;0.55;0.66;0.88;1" 
+                    calcMode="spline"
+                />
+
+                <animate 
+                    id="animate_to_play" 
+                    begin="indefinite" 
+                    fill="freeze" 
+                    attributeName="points" 
+                    dur="500ms" 
+                    to="50,40 100,70 100,70 50,100, 50,40" 
+                    keySplines="
+                    0.1 0.8 0.2 1; 
+                    0.1 0.8 0.2 1; 
+                    0.1 0.8 0.2 1; 
+                    0.1 0.8 0.2 1; 
+                    0.1 0.8 0.2 1; 
+                    0.1 0.8 0.2 1"
+                    keyTimes="0;0.22;0.33;0.55;0.66;0.88;1" 
+                    calcMode="spline"
+                />
+            </polygon>
+            <rect x="0" y="0" width="100%" height="100%" style="fill-opacity:0; stroke-opacity:0;" onclick="toggleStream('https://stream.gensokyoradio.net/1/')" />
+        </svg>
+        <!--<img class="mediabutton play" src="/images/gr-play-sm.png" onclick="playStream('https://stream.gensokyoradio.net/1')" />&nbsp;
+        <img class="mediabutton stop" src="/images/gr-stop-sm.png" onclick="stopStream()" />-->
+        &nbsp;&nbsp; <span style="width:260px; text-align:right;"><span id="songVolPercent" style="position:relative; top:0px;">50%</span> &nbsp;<input id="volSlider" type="range" min="0" max="1" step=".01" value="" style="background:inherit;"></span>&nbsp;&nbsp;
+    </span>
+    
+</div>
+<div class="navbar-end is-hidden-touch">
+    <span id="playerCounter"></span>
+    <div id="durationBar" style="position:absolute; bottom:0px; left: 0px; width:100%; height:5px; background:#fff8"></div>
+</div>
+
+<script type="text/javascript">
+    var isPlaying = !audio.paused;
+
+    $('#playStopBtn').click(function() {
+        isPlaying = !isPlaying;
+        var animation = isPlaying ? 'stop' : 'play';
+        $('#animate_to_' + animation).get(0).beginElement();
+    });
+
+</script>
+</div>
+            <!-- Main hero body 1 -->
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns is-vcentered">
+                        <div class="column">
+                            <figure class="image is-pulled-right" style="width:600px; height:600px; object-fit:contain;">
+                                <img id="playerArt" style="max-width:600px; max-height:600px; object-fit:contain; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);" src="#">
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <div>
+                                <span class="is-size-3 has-text-weight-bold" id="playerTitle" style="position:relative;"></span>
+                                <span class="is-size-3 has-text-weight-bold">&nbsp;</span>
+                            </div>
+                            <div>
+                                <span class="is-size-4" id="playerArtist" style="position:relative;"></span>
+                                <span class="is-size-4">&nbsp;</span>
+                            </div>
+                            <div>
+                                <span class="is-size-4" id="playerAlbum" style="position:relative;"></span>
+                                <span class="is-size-4">&nbsp;</span>
+                            </div>
+                            <div>
+                                <span class="is-size-4" id="playerCircle" style="position:relative;"></span>
+                                <span class="is-size-4">&nbsp;</span>
+                            </div>
+                            
+                            <span>
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="rating_desc" class="notification is-primary has-text-weight-bold" style="display:none; position: relative; bottom: 200px; margin: 0px auto; max-width: 400px; text-align:center;"></div>
+
+        
+
+        
+    </body>
+</html>
