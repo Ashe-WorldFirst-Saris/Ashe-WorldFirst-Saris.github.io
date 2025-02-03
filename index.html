@@ -69,7 +69,6 @@
         }
         a:hover i {
             transform: scale(1.05);
-        
         }
         .invisible-button {
             position: absolute;
@@ -78,6 +77,11 @@
             background: transparent;
             border: none;
 			cursor: hand;
+            opacity: 0; 
+            transition: opacity 0.3s ease; 
+        }
+        .invisible-button:hover {
+            opacity: 1; 
         }
         .top-left {
             top: 0;
@@ -102,15 +106,13 @@
             const y = (e.clientY / window.innerHeight) * 0 - 5; 
             document.body.style.backgroundPosition = `${x}px ${y}px`;
         });
-
-       /* let scale = 1;
+		       /* let scale = 1;
         document.addEventListener('click', function() {
             scale += 0.1;
             const gif = document.querySelector('img');
             gif.style.transform = `scale(${scale})`;
         }); */
-    </script>
-	<script>
+		
      /* window.addEventListener("load", function () {
         window.scrollTo(0, screen.height / 2);
       });
@@ -118,7 +120,7 @@
       function PanPakaPan() {
         var audio = new Audio("PanPakaPan.mp3");
         audio.play();*/
-      }
+      
     </script>
 </head>
 <body>  
@@ -146,14 +148,23 @@
 					<button style="background: transparent; border: none; cursor: pointer;" onclick="window.location.href='https://inara.cz/elite/cmdr/401756/';">
 					<img draggable=false src="images/inara.png" alt="inara" style="top-right; width: 50px; height: 50px;">
 					</button>
-
                 </a>
             </li>
     </footer>
-    <button class="invisible-button top-left" onclick="window.location.href='https://ashe.moe/shimakaze';"></button>
-    <button class="invisible-button top-right" onclick="window.location.href='https://ashe.moe/arisu';"></button>
-    <button class="invisible-button bottom-left" onclick="window.location.href='https://ashe.moe/ei';"></button>
-	<button class="invisible-button bottom-right" onclick="window.location.href='https://ashe.moe/sandy';"></button>
+    <div>
+	<button class="invisible-button top-left" onclick="window.location.href='https://ashe.moe/shimakaze';">
+	<img draggable=false src="images/shima.png" alt="shimakaze" style="top-right; width: 50px; height: 50px;">
+	</button>
+	</div>
+    <button class="invisible-button top-right" onclick="window.location.href='https://ashe.moe/arisu';">
+	<img draggable=false src="images/arisu.png" alt="arisu" style="top-right; width: 50px; height: 50px;">
+	</button>
+    <button class="invisible-button bottom-left" onclick="window.location.href='https://ashe.moe/ei';">
+	<img draggable=false src="images/ei.png" alt="ei" style="top-right; width: 50px; height: 50px;">
+	</button>
+	<button class="invisible-button bottom-right" onclick="window.location.href='https://ashe.moe/sandy';">
+	<img draggable=false src="images/al.png" alt="sandy" style="top-right; width: 50px; height: 50px;">
+	</button>
     <div style="text-align: bottom;">
 	<li>
         <a draggable=false href="https://ashe.moe/touhou" style="color: white;">touhou</a>	
@@ -161,7 +172,7 @@
 		<a draggable=false href="https://ashe.moe/chat" style="color: white;">hatemail</a>	
 	</li>
 	</div>
-	<dev>
+	<div>
 		<button style="background: transparent; border: none; cursor: pointer;" onclick="window.location.href='https://ashe.moe/badapple';">
 		<img draggable=false src="images/apple.png" alt="Apple" style="top-right; width: 50px; height: 50px;">
 		</button>
