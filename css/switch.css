@@ -13,7 +13,7 @@
   opacity: 0;
 }
 .switch input:checked ~ label {
-  background: #b162e8;
+  background: #7b1313;
 }
 .switch input:checked ~ label::before {
   left: 2.25rem;
@@ -60,7 +60,7 @@ input + .switch label {
   height: 1.5rem;
 }
 .switch.is-small input:checked ~ label {
-  background: #b162e8;
+  background: #7b1313;
 }
 .switch.is-small input:checked ~ label::before {
   left: 1.75rem;
@@ -107,7 +107,7 @@ input + .switch.is-small label {
   height: 2.5rem;
 }
 .switch.is-medium input:checked ~ label {
-  background: #b162e8;
+  background: #7b1313;
 }
 .switch.is-medium input:checked ~ label::before {
   left: 2.75rem;
@@ -154,7 +154,7 @@ input + .switch.is-medium label {
   height: 3rem;
 }
 .switch.is-large input:checked ~ label {
-  background: #b162e8;
+  background: #7b1313;
 }
 .switch.is-large input:checked ~ label::before {
   left: 3.25rem;
