@@ -42,15 +42,31 @@
             </div>
             <div class="navbar-menu">
                 <div class="navbar-end">
-					<div class="switch is-small tooltip" style="position:relative; right: 30px; top:30px;">
-								<a href="https://ashe.moe/radio/disabled">
-					<img src="../images/vis.png" alt="Visualizer Button" style="; cursor: pointer; width: 30px; height: 30px;">
-					<span class="tooltiptext">The button will<br>disable the visualizer.</span>
+                    <div class="switch is-small tooltip" style="position:relative; right: 30px; top:30px;">
+                        <a href="#" onclick="toggleVisualizer()">
+                            <img src="../images/vis.png" alt="Visualizer Button" style="cursor: pointer; width: 30px; height: 30px;">
+                            <span class="tooltiptext">The button will<br>toggle the visualizer.</span>						
 				</a>
                 </div>
             </div>
         </nav>
     </header>
+	<script>
+        function toggleVisualizer() {
+            var canvas = document.getElementById('eq_canvas');
+            if (canvas.width === 1920) {
+                canvas.width = 0;
+                canvas.height = 0;
+                canvas.style.width = '0%';
+                canvas.style.height = '0%';
+            } else {
+                canvas.width = 1920;
+                canvas.height = 1080;
+                canvas.style.width = '100%';
+                canvas.style.height = '100%';
+            }
+        }
+    </script>
 
     <div id="navBot" class="navbar is-fixed-bottom is-black is-spaced is-hidden-mobile">
         <div class="navbar-brand is-dark is-hidden-touch">
