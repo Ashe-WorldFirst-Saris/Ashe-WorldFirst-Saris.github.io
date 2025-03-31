@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>/title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        #uploadButton {
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        #imageGrid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .imageItem {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1></h1>
+    <input type="file" id="imageUpload" accept="image/*" multiple>
+    <button id="uploadButton">Upload Images</button>
+
+    <div id="imageGrid"></div>
+
+    <script>
+        const uploadButton = document.getElementById('uploadButton');
+        const imageUpload = document.getElementById('imageUpload');
+        const imageGrid = document.getElementById('imageGrid');
+
+        uploadButton.addEventListener('click', () => {
+            const files = imageUpload.files;
+            for (let i = 0; i < files.length; i++) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.classList.add('imageItem');
+                    imageGrid.prepend(img);
+                    if (imageGrid.children.length > 16) {
+                        imageGrid.removeChild(imageGrid.lastChild);
+                    }
+                }
+                reader.readAsDataURL(files[i]);
+            }
+        });
+    </script>
+
+</body>
+</html>
