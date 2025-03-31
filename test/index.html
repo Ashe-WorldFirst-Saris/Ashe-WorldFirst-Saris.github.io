@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>a</title>
+    <title>Test</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            margin: 20px;
+            margin: 0;
+            padding: 20px;
         }
-        #uploadButton {
-            margin: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
+        #uploadForm {
+            margin-bottom: 20px;
         }
         #imageGrid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 10px;
-            margin-top: 20px;
         }
-        .imageItem {
+        img {
             width: 100%;
             height: auto;
         }
@@ -30,32 +28,42 @@
 <body>
 
     <h1></h1>
-    <input type="file" id="imageUpload" accept="image/*" multiple>
-    <button id="uploadButton">Upload Images</button>
-
+    <div id="uploadForm">
+        <input type="file" id="imageUpload" accept="image/*">
+        <button onclick="uploadImage()">Upload Image</button>
+    </div>
     <div id="imageGrid"></div>
 
     <script>
-        const uploadButton = document.getElementById('uploadButton');
-        const imageUpload = document.getElementById('imageUpload');
         const imageGrid = document.getElementById('imageGrid');
+        let images = JSON.parse(localStorage.getItem('images')) || [];
 
-        uploadButton.addEventListener('click', () => {
-            const files = imageUpload.files;
-            for (let i = 0; i < files.length; i++) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    const img = document.createElement('img');
-                    img.src = e.target.result;
-                    img.classList.add('imageItem');
-                    imageGrid.prepend(img);
-                    if (imageGrid.children.length > 16) {
-                        imageGrid.removeChild(imageGrid.lastChild);
-                    }
-                }
-                reader.readAsDataURL(files[i]);
+        function displayImages() {
+            imageGrid.innerHTML = '';
+            images.forEach((image) => {
+                const imgElement = document.createElement('img');
+                imgElement.src = image;
+                imageGrid.appendChild(imgElement);
+            });
+        }
+
+        function uploadImage() {
+            const fileInput = document.getElementById('imageUpload');
+            const file = fileInput.files[0];
+            const reader = new FileReader();
+
+            reader.onloadend = function () {
+                images.push(reader.result);
+                localStorage.setItem('images', JSON.stringify(images));
+                displayImages();
             }
-        });
+
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        }
+
+        displayImages();
     </script>
 
 </body>
