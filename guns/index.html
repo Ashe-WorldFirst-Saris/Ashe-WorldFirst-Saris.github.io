@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yeah i got big guns </title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            animation: strobe 0.4s infinite;
+            user-select: none; 
+        }
+
+        @keyframes strobe {
+            0% { background-color: red; }
+            30% { background-color: green; }
+            40% { background-color: blue; }
+            50% { background-color: indigo; }
+            60% { background-color: violet; }
+            70% { background-color: red; }
+            90% { background-color: yellow; }
+            100% { background-color: black; }
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            animation: textStrobe 0.3s infinite;
+        }
+
+        @keyframes textStrobe {
+            0%, 100% {
+                color: red;
+                color: blue;
+                color: green;
+                color: yellow;
+                color: green;
+                color: black;
+            }
+            50% {
+                color: violet;
+                color: orange;
+                color: green;
+                color: indigo;
+                color: red;
+            }
+        }
+
+        .confetti {
+            position: absolute;
+            width: 118px; 
+            height: 40px; 
+            background-image: url('confetti.png');
+            background-size: contain; 
+            animation: fall 2s forwards;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+
+        @keyframes shake {
+            0% { transform: translate(0); }
+            25% { transform: translate(-2px, 3px); }
+            50% { transform: translate(15px, 4px); }
+            75% { transform: translate(-8px, 6px); }
+            100% { transform: translate(7px, 10px); }
+        }
+
+        #counter {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2em;
+        }
+    </style>
+    <audio id="bang" src="bang.mp3" type="audio/mpeg"></audio>
+    <audio id="loop" src="1.mp3" type="audio/mpeg" loop></audio>
+</head>
+<body>
+    <h1 id="title">big guns</h1>
+    <div id="counter">guns: 0</div>
+    <script>
+        let count = 0;
+        document.body.addEventListener('click', function() {
+            count++;
+            document.getElementById('counter').innerText = `guns: ${count}`;
+            document.getElementById('bang').currentTime = 0;
+            document.getElementById('bang').play();
+            document.getElementById('loop').play();
+            for (let i = 0; i < 10; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                const images = ['confetti.png', 'confetti2.png', 'confetti3.png'];
+                confetti.style.backgroundImage = `url('${images[Math.floor(Math.random() * images.length)]}')`;
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.top = Math.random() * 100 + 'vh';
+                confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+                document.body.appendChild(confetti);
+                setTimeout(() => {
+                    confetti.remove();
+                }, 2000);
+            }
+            const title = document.getElementById('title');
+            let currentSize = parseFloat(window.getComputedStyle(title).fontSize);
+            title.style.fontSize = (currentSize * 1.01) + 'px';
+            title.style.animation = 'shake 0.15s';
+            setTimeout(() => {
+                title.style.animation = '';
+            }, 300);
+            if (count === 420) {
+                window.location.href = "https://ashe.moe/skibidi";
+            }
+        });
+    </script>
+</body>
+</html>
